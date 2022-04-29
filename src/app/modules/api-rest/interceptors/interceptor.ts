@@ -8,6 +8,7 @@ export class Interceptor implements HttpInterceptor{
         const requestClone = req.clone({
             headers: req.headers.set('auth',localStorage.getItem('token'))
         });
+        console.log(requestClone);
         return next.handle(requestClone);
     }
 }
