@@ -1,0 +1,8 @@
+<mat-spinner class="spinner" diameter="50" *ngIf="loading"></mat-spinner>
+
+<section class="body" *ngIf="user!=undefined && !loading">
+    <h2>{{user.name.first+" "+user.name.last}}</h2>
+    <p><b>Email: </b>{{user.email}}</p>
+    <p><b>Username: </b>{{user.username}}</p>
+    <button class="button-blue" mat-button routerLink="/login" (click)="logOut()">Logout</button>
+</section>

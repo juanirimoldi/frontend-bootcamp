@@ -1,0 +1,48 @@
+<mat-spinner class="spinner" diameter="50" *ngIf="loading"></mat-spinner>
+
+<section class="body" *ngIf="!loading">
+
+  <mat-accordion *ngIf="story!==undefined">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header class="panel">
+          <mat-panel-title class="panel-tittle">
+            Story information
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+          <mat-card class="information">
+              <p><b>ID: </b>{{story._id}}</p>
+              <p><b>Description:</b> {{story.description}}</p>
+              <p><b>Epic:</b> {{story.epic}}</p>
+              <p><b>Owner:</b> {{story.owner}}</p>
+              <p><b>AssignedTo:</b> {{story.assignedTo}}</p>
+              <p><b>Points:</b> {{story.points}}</p>
+              <p><b>Created Date:</b> {{story.created}}</p>
+              <p><b>Status:</b> {{story.status}}</p>
+          </mat-card>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <button class="button-blue" mat-button (click)="openAddTaskDialog()">
+      <mat-icon>add</mat-icon>
+      Add task
+    </button>
+
+    <ol class="list">
+      <task-item class="task" *ngFor="let t of tasks" [task]="t" (deleteTaskEvent)="deleteTask($event)"></task-item>
+    </ol>
+
+    <div class="empty-tasks" *ngIf="tasks!== undefined && tasks.length===0">
+      <mat-card class="empty-card" >
+        <mat-card-header class="tittle"> 
+            <mat-icon class="icon">hourglass_disabled</mat-icon>
+            <mat-card-title class="name">We are sorry</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>No task assigned to that story!</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="button" mat-button routerLink="/home">Home</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </section>

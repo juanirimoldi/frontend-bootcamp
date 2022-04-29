@@ -1,0 +1,22 @@
+<section class="body">
+    <img class="logo" src="/assets/images/dazzle-blue.png" alt="App logo">        
+    <form class="login" [formGroup]="myForm" (ngSubmit)="logIn()">
+        <mat-icon class="user-icon">account_circle</mat-icon>
+        <h1>Sign In</h1>
+        <mat-form-field class="input" appearance="outline">
+            <mat-label>User</mat-label>
+            <input matInput autocomplete="off" formControlName="user" required>
+            <mat-error *ngIf="myForm.invalid">{{getErrorMessage('user')}}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" autocomplete="off" formControlName="password" required>
+            <mat-error *ngIf="myForm.invalid" >{{getErrorMessage('password')}}</mat-error>
+            <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" [disabled]="myForm.invalid" *ngIf="!loading">Log In</button>
+        <mat-spinner class="spinner" diameter="50" *ngIf="loading"></mat-spinner>
+    </form>  
+</section>

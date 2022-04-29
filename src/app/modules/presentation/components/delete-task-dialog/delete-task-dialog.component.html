@@ -1,0 +1,12 @@
+<form class="form" [formGroup]="myForm"  (ngSubmit)="deleteTask()">
+
+    <h2 class="tittle">Delete task</h2>
+  
+    <p>Are you sure you want to delete the task '{{data.task.name}}'?</p>
+  
+    <section class="buttons">
+      <button class="button blue" type="button" mat-button mat-dialog-close>Cancel</button>
+      <button class="button red" type="submit" mat-button>Delete</button>
+    </section>
+  
+  </form>

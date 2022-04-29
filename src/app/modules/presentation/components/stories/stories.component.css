@@ -1,0 +1,45 @@
+.stories{
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.story{
+    width: 18rem;
+    height: fit-content;
+    min-height: 7rem;;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #3f51b5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+.tittle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.icon{
+    order: -1;
+}
+
+button{
+    background-color: white;
+    color: #3f51b5;
+}
+
+.spinner{
+    margin: auto;
+    margin-top: 7rem;
+}

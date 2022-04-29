@@ -1,0 +1,23 @@
+<li class="task">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title class="tittle">
+          <mat-checkbox color="primary">{{task.name}}</mat-checkbox> 
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="panel">
+        <mat-card class="information">
+            <p><b>Description:</b> {{task.description}}</p>
+            <p><b>Story:</b> {{task.story}}</p>
+            <p><b>Created Date:</b> {{task.created}}</p>
+            <p><b>Due Date:</b> {{task.due}}</p>
+        </mat-card>
+        <button class="button-red" mat-button (click)="openDeleteTaskDialog()">
+          <mat-icon>delete</mat-icon>
+          Delete
+        </button>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+</li>

@@ -1,0 +1,80 @@
+.panel-tittle{
+    font-size: large;
+    font-weight: bold;
+    color: #3f51b5;
+}
+
+.information{
+    color: #3f51b5;
+}
+
+.panel{
+    margin-top: 3.8rem;
+}
+
+.list{
+  list-style-type: none;
+  width: 90%;
+  padding-left: 1rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task{
+    width: 20rem;
+    overflow-wrap: normal;
+    height: auto;
+}
+
+.empty-tasks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty-card{
+    width: 18rem;
+    height: fit-content;
+    min-height: 8rem;
+    margin-bottom: 1rem;
+    background-color: #3f51b5;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.tittle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.icon{
+    order: -1;
+}
+
+.button{
+    margin-right: 2rem;
+    margin-left: 1rem;
+    background-color: white;
+    color: #3f51b5;
+}
+
+.button-blue{
+    margin-top: 1rem;
+    position:relative;
+    left: 10%;
+    width: 80%;
+    height: 3rem;
+    background-color: #3f51b5;
+    color: white;
+}
+
+.spinner{
+    margin: auto;
+    margin-top: 7rem;
+}

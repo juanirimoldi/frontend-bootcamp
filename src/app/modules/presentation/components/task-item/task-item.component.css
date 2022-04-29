@@ -1,0 +1,28 @@
+.task{
+    margin-bottom: 1rem;
+}
+
+.tittle{
+    font-size: medium;
+    color: #3f51b5;
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information{
+    color: #3f51b5;
+    width: 90%;
+}
+
+
+.button-red{
+    margin-top: 1rem;
+    width: 50%;
+    height: 2.5rem;
+    background-color: rgb(199, 7, 7);
+    color: white;
+}

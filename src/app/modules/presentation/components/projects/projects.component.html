@@ -1,0 +1,29 @@
+<mat-spinner class="spinner" diameter="50" *ngIf="loading"></mat-spinner>
+
+<div class="projects" *ngIf="projects!=undefined && projects.length!=0 && !loading">
+    <mat-card class="project" *ngFor="let project of projects" [routerLink]="'/my-projects/'+project.id">
+      <mat-card-header class="tittle"> 
+          <mat-icon class="icon" *ngIf="project.icon !== null">{{project.icon}}</mat-icon>
+          <mat-icon class="icon" *ngIf="project.icon === null">folder</mat-icon>
+          <mat-card-title class="name">{{project.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p><b>Description:</b> {{project.description}}</p>
+      </mat-card-content>
+    </mat-card>
+</div>
+
+<div class="projects" *ngIf="projects!=undefined && projects.length===0 && !loading">
+  <mat-card class="project" >
+    <mat-card-header class="tittle"> 
+        <mat-icon class="icon">folder_off</mat-icon>
+        <mat-card-title class="name">We are sorry</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>No projects assigned to that user!</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button routerLink="/home">Home</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
