@@ -13,6 +13,9 @@ export class LoginService {
 
   getToken(user: string, password:string): Observable<any>{
     this.username = user;
+    
+    console.log("user",user);
+    console.log("password",password);
     return this.http.post(' https://lamansys-tasks-fake-api.herokuapp.com/api/login', 
     {
       "username": this.username,
@@ -22,7 +25,7 @@ export class LoginService {
   }
 
   isLogged(): boolean{
-    if(localStorage.getItem('token') !== 'undefined')
+    if(localStorage.getItem('token'))
       return true;
     return false;
   }

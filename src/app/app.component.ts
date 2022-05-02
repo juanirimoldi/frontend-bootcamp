@@ -13,7 +13,7 @@ export class AppComponent {
 	currentYear = new Date().getFullYear()
 
 	constructor(translate: TranslateService) {
-		translate.setDefaultLang(DEFAULT_LANG)
+		translate.setDefaultLang(DEFAULT_LANG);
 	}
 
 }

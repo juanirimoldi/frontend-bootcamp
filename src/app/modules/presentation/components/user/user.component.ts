@@ -28,7 +28,6 @@ export class UserComponent implements OnInit {
   }
 
   logOut(): void{
-    localStorage.setItem('token','undefined');
-    localStorage.setItem('userId','undefined');
+    localStorage.clear();
   }
 }
